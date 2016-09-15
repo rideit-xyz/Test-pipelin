@@ -19,28 +19,8 @@ var strava = require('strava-v3');
  * @return {signinEndPoint} Full URL targetted by "connect with Strava" button 
  */
 function buildSignInEndPoint (){
-  var signInEndPoint;
-  var args={};
-  signInEndPoint=strava.oauth.getRequestAccessURL(args);
-  Logger.getLogger().info('Sign In End point on ' + signInEndPoint);
-  return signInEndPoint;
+  return process.env.STRAVA_SIGN_IN_END_POINT_URI;
 }
-
-/**
- * Get Strava authentication token for the current users 
- * @param {code} dynamic code given by strava following initiation of authentication flow
- */
-function tokenExchange (code){
-  strava.oauth.getToken({'code':code},function(err,payload) {
-            if(!err) {
-                Logger.getLogger().info(payload);
-            }
-            else {
-                Logger.getLogger().info(err);
-            }
-        }); 
-}
-
 
 /***********************************
  * rendering functions
@@ -65,10 +45,6 @@ function renderIndex(req,res){
  ************************************/
 module.exports={
     index :function(req, res) {
-      renderIndex(req,res);
-    },
-    tokenExchange :function(req, res) {
-      tokenExchange(req.params.code);
       renderIndex(req,res);
     }
 }
