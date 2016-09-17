@@ -1,10 +1,10 @@
 {
-  "name": "tiny-base",
-  "version": "1.0.0",
-  "description": "My app description",
+  "name": "just-ride-it",
+  "version": "0.1.0",
+  "description": "Prepare your next ride",
   "scripts": {
     "deploy": "npm test && git push heroku master",
-    "start": "node server.js",
+    "start": "npm start",
     "test": "mocha"
   },
   "dependencies": {
