@@ -14,6 +14,8 @@ results
 tmp
 coverage
 
+# API keys
+.env
 
 # Dependency directory
 node_modules
