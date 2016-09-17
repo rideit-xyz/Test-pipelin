@@ -2,10 +2,8 @@
   "name": "just-ride-it",
   "version": "0.1.0",
   "description": "Prepare your next ride",
-  "scripts": {
-    "deploy": "npm test && git push heroku master",
-    "start": "npm start",
-    "test": "mocha"
+  "engines": {
+    "node": "4.4.7"
   },
   "dependencies": {
     "body-parser": "^1.15.1",
