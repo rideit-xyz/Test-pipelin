@@ -109,7 +109,7 @@ app.get('/dashboard',connectEnsureLogin.ensureLoggedIn(), dashboardController.in
 /***********************************
  * Environment, Exception handling & logging
  ************************************/
-if (app.get('env') === 'production') {
+if (process.env.ENVIRONMENT === 'production') {
   app.use(function(err, req, res, next) {
     Logger.getLogger().error(err.stack);
     res.sendStatus(err.status || 500);
