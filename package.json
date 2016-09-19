@@ -2,8 +2,9 @@
   "name": "just-ride-it",
   "version": "0.1.0",
   "description": "Prepare your next ride",
-  "engines": {
-    "node": "4.4.7"
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.15.1",
@@ -37,5 +38,15 @@
   },
   "engines": {
     "node": "6.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beaule/just-ride-it.git"
+  },
+  "keywords": [
+    "node",
+    "strava",
+    "webapp"
+  ],
+  "author": "Frederic Lebeau"
 }
