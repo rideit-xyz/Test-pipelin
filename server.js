@@ -102,7 +102,10 @@ app.get('/logon/strava',passport.authenticate('strava'));
 app.get('/logon/strava/call-back', 
   passport.authenticate('strava', { failureRedirect: '/logon' }),
   function(req, res) {
-    res.redirect('/dashboard');
+     res.render('dashboard', {
+    title: 'Dashboard', user: req.user 
+  });
+    //res.redirect('/dashboard');
   });
 app.get('/dashboard',connectEnsureLogin.ensureLoggedIn(), dashboardController.index);
 
