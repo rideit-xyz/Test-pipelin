@@ -105,7 +105,7 @@ app.get('/login/strava/call-back',
     res.redirect('/dashboard');
   });
 //app.get('/dashboard',connectEnsureLogin.ensureLoggedIn(), dashboardController.index);
-app.get('/dashboard',connectEnsureLogin.ensureLoggedIn(), dashboardController.index);
+app.get('/dashboard', dashboardController.index);
 
 /***********************************
  * Environment, Exception handling & logging
