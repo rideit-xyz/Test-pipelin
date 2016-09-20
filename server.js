@@ -97,10 +97,10 @@ var dashboardController = require('./controllers/dashboard');
 var logonController = require('./controllers/logon');
 
 app.get('/', logonController.index);
-app.get('/logon', logonController.index);
-app.get('/logon/strava',passport.authenticate('strava'));
-app.get('/logon/strava/call-back', 
-  passport.authenticate('strava', { failureRedirect: '/logon' }),
+app.get('/login', logonController.index);
+app.get('/login/strava',passport.authenticate('strava'));
+app.get('/login/strava/call-back', 
+  passport.authenticate('strava', { failureRedirect: '/login' }),
   function(req, res) {
     res.redirect('/dashboard');
   });
