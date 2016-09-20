@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .left_col {
-  background: #2A3F54; }
+  background: #FFFFFF; }
 
 .nav-sm .container.body .col-md-3.left_col {
   min-height: 100%;
@@ -210,7 +210,7 @@ body .container.body .right_col {
 .nav_title {
   width: 230px;
   float: left;
-  background: #2A3F54;
+  background: #FFFFFF;
   border-radius: 0;
   height: 57px; }
 
@@ -329,7 +329,7 @@ body .container.body .right_col {
 
 body {
   color: #73879C;
-  background: #2A3F54;
+  background: #FFF;
   font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -427,7 +427,7 @@ h1, .h1, h2, .h2, h3, .h3 {
   margin-bottom: 10px; }
 
 a {
-  color: #5A738E;
+  color: #000;
   text-decoration: none; }
 
 a, a:visited, a:focus, a:active, :visited, :focus, :active, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
@@ -489,7 +489,7 @@ a:hover, a:focus {
   margin-bottom: 6px; }
 
 .nav.side-menu > li > a:hover {
-  color: #F2F5F7 !important; }
+  color: #eb4310 !important; }
 
 .nav.side-menu > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
@@ -557,12 +557,12 @@ a:hover, a:focus {
 
 .nav.side-menu > li.active > a {
   text-shadow: rgba(0, 0, 0, 0.25) 0 -1px 0;
-  background: linear-gradient(#334556, #2C4257), #2A3F54;
+  background: linear-gradient(#334556, #2C4257), #FFFFFF;
   box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0; }
 
 .navbar-brand, .navbar-nav > li > a {
   font-weight: 500;
-  color: #ECF0F1 !important;
+  color: #eb4310 !important;
   margin-left: 0 !important;
   line-height: 32px; }
 
@@ -572,7 +572,7 @@ a:hover, a:focus {
   font-weight: 400;
   font-size: 22px;
   width: 100%;
-  color: #ECF0F1 !important;
+  color: #eb4310 !important;
   margin-left: 0 !important;
   line-height: 59px;
   display: block;
@@ -1419,7 +1419,7 @@ span.right {
   padding: 5px 0 0 0;
   position: fixed;
   width: 230px;
-  background: #2A3F54; }
+  background: #FFF; }
 
 .sidebar-footer a {
   padding: 7px 0 3px;
@@ -1428,10 +1428,10 @@ span.right {
   font-size: 17px;
   display: block;
   float: left;
-  background: #172D44; }
+  background: #FFF; }
 
 .sidebar-footer a:hover {
-  background: #425567; }
+  background: #FFF; }
 
 /** top tiles  */
 .tile_count {
@@ -2976,11 +2976,11 @@ ul.project_files li a i {
   margin-left: -1px; }
 
 .tabs-left > li.active > a, .tabs-left > li.active > a:hover, .tabs-left > li.active > a:focus {
-  border-bottom-color: #F7F7F7;
+  border-bottom-color: #eb4310;
   border-right-color: transparent; }
 
 .tabs-right > li.active > a, .tabs-right > li.active > a:hover, .tabs-right > li.active > a:focus {
-  border-bottom: 1px solid #F7F7F7;
+  border-bottom: 1px solid #eb4310;
   border-left-color: transparent; }
 
 .tabs-left > li > a {
