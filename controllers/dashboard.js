@@ -15,15 +15,16 @@
 /***********************************
  * Private properties
  ************************************/
-var _segmentListStarred;
 
 /***********************************
  * Private functions
  ************************************/
 function getFavoriteSegment(){
+  var segmentListStarred;
   strava.segments.listStarred(function(err,payload) {
-            _segmentListStarred=payload;
+            segmentListStarred=payload;
   });
+  return segmentListStarred;
 }
 
 /***********************************
@@ -38,7 +39,7 @@ function getFavoriteSegment(){
  */
 function renderIndex(req,res){
   res.render('dashboard', {
-    title: 'Dashboard', user: req.user, segmentListStarred:_segmentListStarred,
+    title: 'Dashboard', user: req.user, segmentListStarred:getFavoriteSegment(),
   });
 }
 
