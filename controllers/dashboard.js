@@ -1,15 +1,30 @@
 /***********************************
  * dashboard controller expose UI to visualise logged athlete dashboard (multiple widgets)
  ************************************/
-
+ 
 /***********************************
  * Module dependencies.
  * @private
  ************************************/
+ var strava = require('strava-v3');
+
+ /***********************************
+ * Private constants.
+ ************************************/
+
+/***********************************
+ * Private properties
+ ************************************/
+var _segmentListStarred;
 
 /***********************************
  * Private functions
  ************************************/
+function getFavoriteSegment(){
+  strava.segments.listStarred(function(err,payload) {
+            _segmentListStarred=payload;
+  });
+}
 
 /***********************************
  * rendering functions
@@ -23,7 +38,7 @@
  */
 function renderIndex(req,res){
   res.render('dashboard', {
-    title: 'Dashboard', user: req.user 
+    title: 'Dashboard', user: req.user, segmentListStarred:_segmentListStarred,
   });
 }
 
