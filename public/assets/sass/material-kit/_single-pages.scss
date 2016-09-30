@@ -1,0 +1,183 @@
+.wrapper > .header{
+    min-height: 100px;
+    background-position: center center;
+    background-size: cover;
+}
+.main{
+    background: #FFFFFF;
+    position: relative;
+    z-index: 3;
+
+}
+.main-raised{
+    margin: -60px 30px 0px;
+    border-radius: $border-radius-base * 2;
+    @include shadow-16dp();
+}
+
+.title{
+    font-weight: $font-weight-bold;
+    color: $black-color;
+}
+h2.title{
+    margin-bottom: $margin-base * 2;
+}
+.description{
+    color: $gray-light;
+}
+
+// general style for example pages
+.header-filter{
+    position: relative;
+
+    &:after{
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+        top: 0;
+        content: "";
+        background-color: rgba(0,0,0,.4);
+    }
+
+    .container{
+        z-index: 2;
+        position: relative;
+    }
+}
+.gallery{
+    .image{
+        img{
+            width: 100%;
+        }
+    }
+}
+.features{
+    padding: 80px 0 0;
+}
+
+.team{
+    margin-top: 80px;
+
+    .team-player{
+        .title{
+            margin: $margin-base * 2 auto;
+        }
+        img{
+            max-width: 170px;
+        }
+    }
+}
+.nav-align-center{
+    text-align: center;
+
+    .nav-pills{
+        display: inline-block;
+    }
+}
+.navbar-absolute{
+    position: absolute;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 1031;
+}
+
+// style for the landing page
+.landing-page{
+
+    .header{
+        height: 100vh;
+
+        .container{
+            padding-top: 26vh;
+            color: #FFFFFF;
+        }
+
+        .share{
+            margin-top: 150px;
+        }
+        h1{
+            font-weight: 600;
+        }
+        .title{
+            color: $white-color;
+        }
+    }
+
+    .wrapper{
+        background: $grey-200;
+    }
+    
+    .navbar-transparent{
+        padding-top: 25px;
+    }  
+
+    .section-for-whom{
+        background: $grey-200;
+    } 
+
+    
+}
+
+@media (max-width: 991px){
+    .landing-page .header{
+        height: auto;
+        min-height: 100vh;
+
+        .container{
+            padding-bottom: 70px
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .footer{
+        .copyright{
+            display: inline-block;
+            text-align: center;
+            padding: 10px 0;
+            float: none !important;
+            width: 100%;
+
+        }
+    }
+
+    .navbar.navbar-transparent{
+        background-color: rgba(0,0,0,.4);
+        padding-top: 10px;
+        border-radius: 0;
+    }    
+
+    .main-raised{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+
+.logo-container .logo{
+    overflow: hidden;        
+    width: 32px;
+    margin-top: 7px;
+    float: left;
+}
+
+.logo-container .brand{
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    color: $deep-orange-600;
+    line-height: 18px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 16px;
+    width: 100px;
+    height: 40px;
+    text-align: left;    
+}
+
+.logo-container .logo img{
+    width: 100%;
+}

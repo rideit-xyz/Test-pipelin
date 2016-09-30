@@ -22,7 +22,7 @@ node_modules
 bower_components
 
 # work directory
-work
+work/
 
 # Editors
 .idea

@@ -17,6 +17,9 @@ var exphbs = require('express-handlebars');
 var passport = require('passport');
 var StravaStrategy = require('passport-strava').Strategy;
 var connectEnsureLogin=require('connect-ensure-login');
+var globalTunnel = require('global-tunnel');
+
+
 /***********************************
  * App creation
  ************************************/
@@ -53,7 +56,8 @@ var hbs = exphbs.create({
 passport.use(new StravaStrategy({
     clientID: process.env.STRAVA_CLIENT_ID,
     clientSecret: process.env.STRAVA_CLIENT_SECRET,
-    callbackURL: process.env.STRAVA_CALL_BACK_URI
+    callbackURL: process.env.STRAVA_CALL_BACK_URI,   
+    tokenURL:'http://localhost:3000'
   },
   function(accessToken, refreshToken, profile, cb) {
     Logger.getLogger().info(profile);
@@ -90,13 +94,17 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(Logger.getRequestLogger());
 
+//globalTunnel.initialize();
+
+
 /***********************************
  * Controllers
  ************************************/
-var dashboardController = require('./controllers/dashboard');
+var landingController = require('./controllers/landing');
 var logonController = require('./controllers/logon');
+var dashboardController = require('./controllers/dashboard');
 
-app.get('/', logonController.index);
+app.get('/', landingController.index);
 app.get('/login', logonController.index);
 app.get('/login/strava',passport.authenticate('strava'));
 app.get('/login/strava/call-back', 
@@ -105,8 +113,8 @@ app.get('/login/strava/call-back',
     res.redirect('/dashboard');
   });
 app.get('/logout',connectEnsureLogin.ensureLoggedIn(),logonController.index);
-app.get('/dashboard',connectEnsureLogin.ensureLoggedIn(), dashboardController.index);
-//app.get('/dashboard', dashboardController.index);
+//app.get('/dashboard',connectEnsureLogin.ensureLoggedIn(), dashboardController.index);
+app.get('/dashboard', dashboardController.index);
 
 
 /***********************************
