@@ -55,7 +55,7 @@ h2.title{
     }
 }
 .features{
-    padding: 80px 0 0;
+    padding: -200px 0 0;
 }
 
 .team{
@@ -111,7 +111,9 @@ h2.title{
     }
     
     .navbar-transparent{
-        padding-top: 25px;
+         background-color: rgba(0,0,0,.4);
+        padding-top: 10px;
+        border-radius: 0;
     }  
 
     .section-for-whom{
@@ -165,8 +167,7 @@ h2.title{
     float: left;
 }
 
-.logo-container .brand{
-    font-family: 'Comfortaa', cursive;
+.logo-container .brand{    
     font-size: 20px;
     color: $deep-orange-600;
     line-height: 18px;
