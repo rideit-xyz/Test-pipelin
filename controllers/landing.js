@@ -11,6 +11,14 @@
  * Private functions
  ************************************/
 
+/**
+ * build sign-in-end-point based on environment variables and manage production VS Dev(stubbed environement)
+ * @return {signinEndPoint} Full URL targetted by "connect with Strava" button 
+ */
+function buildSignInEndPoint (){
+  return process.env.STRAVA_SIGN_IN_END_POINT_URI;
+}
+
 /***********************************
  * rendering functions
  ************************************/
@@ -23,9 +31,10 @@
  */
 function renderIndex(req,res){
   res.render('landing', {
-    title: 'Welcome',        
+    title: 'Welcome',    
+    signInEndPoint:buildSignInEndPoint(),
     layout: 'single-page'
-  });
+  });  
 }
 
 /***********************************

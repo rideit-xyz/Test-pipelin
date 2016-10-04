@@ -8,7 +8,6 @@
  ************************************/
 var express = require('express');
 var Logger = require('../lib/logger');
-var strava = require('strava-v3');
 
 /***********************************
  * Private functions
@@ -40,11 +39,27 @@ function renderIndex(req,res){
   });
 }
 
+/**
+ * welcome screen
+ *
+ * @param {req} request
+ * @param {res} response
+ */
+function renderWelcome(req,res){
+  res.render('welcome', {
+    title: 'Welcome', user: req.user,
+    layout: 'single-page'
+  });
+}
+
 /***********************************
  * Module exports.
  ************************************/
 module.exports={
     index :function(req, res) {
       renderIndex(req,res);
+    },
+    welcome :function(req, res) {
+      renderWelcome(req,res);
     }
 }
