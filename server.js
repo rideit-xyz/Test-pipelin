@@ -56,8 +56,7 @@ var hbs = exphbs.create({
 passport.use(new StravaStrategy({
     clientID: process.env.STRAVA_CLIENT_ID,
     clientSecret: process.env.STRAVA_CLIENT_SECRET,
-    callbackURL: process.env.STRAVA_CALL_BACK_URI,   
-    tokenURL:'http://localhost:3000'
+    callbackURL: process.env.STRAVA_CALL_BACK_URI    
   },
   function(accessToken, refreshToken, profile, cb) {
     Logger.getLogger().info(profile);
