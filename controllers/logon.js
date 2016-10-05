@@ -25,7 +25,7 @@ var Logger = require('../lib/logger');
  */
 function renderWelcome(req,res){
   res.render('welcome', {
-    title: 'Welcome', user: req.user,
+    title: 'Welcome', user: req.user,json:JSON.stringify(req.user),
     layout: 'single-page'
   });
 }
