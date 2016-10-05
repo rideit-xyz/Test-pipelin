@@ -28,7 +28,8 @@
 	  "pg-promise" : "^5.3.3",
     "connect-ensure-login": "^0.1.1",
     "passport": "^0.2.2",
-	  "passport-strava": "0.2.0"
+	  "passport-strava": "^0.2.0",
+    "airtable": "^0.4.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
