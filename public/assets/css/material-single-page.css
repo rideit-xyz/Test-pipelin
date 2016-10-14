@@ -2921,12 +2921,9 @@ h2.title {
 .features {
   padding: -200px 0 0; }
 
-.team {
-  margin-top: 80px; }
-  .team .team-player .title {
-    margin: 30px auto; }
-  .team .team-player img {
-    max-width: 170px; }
+.customer-segments {
+  margin-left: 10px;
+  margin-right: 10px; }
 
 .nav-align-center {
   text-align: center; }
@@ -2956,8 +2953,19 @@ h2.title {
   background-color: rgba(0, 0, 0, 0.4);
   padding-top: 10px;
   border-radius: 0; }
-.landing-page .section-for-whom {
+.landing-page .section-demo {
   background: #eeeeee; }
+.landing-page .vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; }
+.landing-page .section-get-ride-it {
+  background: #eeeeee; }
+.landing-page .info-title {
+  color: #fc4c02; }
+
+.material-icons .big-icon {
+  font-size: 200px; }
 
 @media (max-width: 991px) {
   .landing-page .header {
@@ -2989,7 +2997,7 @@ h2.title {
 
 .logo-container .brand {
   font-size: 20px;
-  color: #f4511e;
+  color: #fc4c02;
   line-height: 18px;
   float: left;
   margin-left: 5px;

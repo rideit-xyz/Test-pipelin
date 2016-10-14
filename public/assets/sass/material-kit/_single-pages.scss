@@ -58,18 +58,11 @@ h2.title{
     padding: -200px 0 0;
 }
 
-.team{
-    margin-top: 80px;
-
-    .team-player{
-        .title{
-            margin: $margin-base * 2 auto;
-        }
-        img{
-            max-width: 170px;
-        }
-    }
+.customer-segments{
+    margin-left: 10px;
+    margin-right: 10px;        
 }
+
 .nav-align-center{
     text-align: center;
 
@@ -116,11 +109,29 @@ h2.title{
         border-radius: 0;
     }  
 
-    .section-for-whom{
+    .section-demo{
+        background: $grey-200;
+    }
+
+    .vcenter{
+         display: inline-block;
+        vertical-align: middle;
+        float: none;
+    }
+
+    .section-get-ride-it{
         background: $grey-200;
     } 
 
+    .info-title{
+        color:$brand-primary;
+    }
+
     
+}
+
+.material-icons .big-icon{
+ font-size: 200px;
 }
 
 @media (max-width: 991px){
@@ -169,7 +180,7 @@ h2.title{
 
 .logo-container .brand{    
     font-size: 20px;
-    color: $deep-orange-600;
+    color: $brand-primary;
     line-height: 18px;
     float: left;
     margin-left: 5px;
