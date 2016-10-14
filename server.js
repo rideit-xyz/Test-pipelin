@@ -112,8 +112,7 @@ app.get('/login/strava/call-back',
     res.redirect('/welcome');
   });
 app.get('/logout',connectEnsureLogin.ensureLoggedIn(),logonController.index);
-//app.get('/dashboard',connectEnsureLogin.ensureLoggedIn(), dashboardController.index);
-app.get('/welcome', logonController.welcome);
+app.get('/welcome',connectEnsureLogin.ensureLoggedIn(), logonController.welcome);
 
 
 /***********************************
