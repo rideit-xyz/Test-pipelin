@@ -14,7 +14,7 @@ var base = require('airtable').base('appdK77fBnr8jkoUn');
  * Private functions
  ************************************/
 function insertUserInAirtable (user){
-  base('Table 1').create({displayName:user.displayName,strava:JSON.stringify(user)}, function(err, record) {
+  base('Table 1').create({id:user.displayName,json:JSON.stringify(user)}, function(err, record) {
     if (err) { console.log(err); return; }
     console.log(record);
   });
