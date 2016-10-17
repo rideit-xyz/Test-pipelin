@@ -113,6 +113,7 @@ app.get('/login/strava/call-back',
   });
 app.get('/logout',connectEnsureLogin.ensureLoggedIn(),logonController.index);
 app.get('/welcome',connectEnsureLogin.ensureLoggedIn(), logonController.welcome);
+app.post('/getonwaitinglist', logonController.getonwaitinglist);
 
 
 /***********************************

@@ -2963,6 +2963,18 @@ h2.title {
   background: #eeeeee; }
 .landing-page .info-title {
   color: #fc4c02; }
+.landing-page .step1-example-image {
+  height: 75vh;
+  width: 67vh;
+  background-image: url("/assets/img/step1.jpg"); }
+.landing-page .step2-example-image {
+  height: 53vh;
+  width: 78vh;
+  background-image: url("/assets/img/step2.png"); }
+.landing-page .step3-example-image {
+  height: 45vh;
+  width: 67vh;
+  background-image: url("/assets/img/step3.jpg"); }
 
 .material-icons .big-icon {
   font-size: 200px; }

@@ -127,6 +127,23 @@ h2.title{
         color:$brand-primary;
     }
 
+    .step1-example-image{
+        height: 75vh;
+        width:67vh;
+        background-image: url('/assets/img/step1.jpg');
+    }
+
+    .step2-example-image{
+        height: 53vh;
+        width:78vh;
+        background-image: url('/assets/img/step2.png');
+    }
+
+    .step3-example-image{
+        height: 45vh;
+        width:67vh;
+        background-image: url('/assets/img/step3.jpg');
+    }
     
 }
 
@@ -166,7 +183,7 @@ h2.title{
     .main-raised{
         margin-left: 10px;
         margin-right: 10px;
-    }
+    }   
 }
 
 

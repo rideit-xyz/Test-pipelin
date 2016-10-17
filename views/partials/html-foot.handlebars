@@ -21,26 +21,8 @@
         ga('create', 'UA-85808114-1', 'auto');
         ga('send', 'pageview');
     </script>
-
-	<!-- WhatsHelp.io widget -->
-	<script type="text/javascript">
-		(function () {
-			var options = {
-				facebook: "523396181118587", // Facebook page ID
-				whatsapp: "0032495367199", // WhatsApp number
-				company_logo_url: "//scontent.xx.fbcdn.net/v/t1.0-1/p50x50/14523171_523399027784969_6861257978073893441_n.png?oh=4dfeb545ca0dee3bb52c62b58e7ceea7&oe=5862B725", // URL of company logo (png, jpg, gif)
-				greeting_message: "Hello, how may we help you? Just send us a message now to get more information.", // Text of greeting message
-				wa_vb_message: "Add the number to the Contacts on your phone and send us a message via app.", // Message for WhatsApp or Viber
-				button_color: "#fc4c02", // Color of button
-				position: "right", // Position may be 'right' or 'left'
-				order: "facebook,whatsapp" // Order of buttons
-			};
-			var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
-			var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-			s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-			var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-		})();
-
+	
+	<script type="text/javascript">		
 		$().ready(function(){
 			// the body of this function is in assets/material-kit.js
 			materialKit.initSliders();
