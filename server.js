@@ -104,6 +104,7 @@ var logonController = require('./controllers/logon');
 var dashboardController = require('./controllers/dashboard');
 
 app.get('/', landingController.index);
+app.get('/howitworks', landingController.howitworks);
 app.get('/login', landingController.index);
 app.get('/login/strava',passport.authenticate('strava'));
 app.get('/login/strava/call-back', 

@@ -2899,6 +2899,9 @@ h2.title {
 .description {
   color: #999999; }
 
+.description-for-whom {
+  font-size: 15px; }
+
 .header-filter {
   position: relative; }
   .header-filter:after {
@@ -2915,15 +2918,9 @@ h2.title {
     z-index: 2;
     position: relative; }
 
-.gallery .image img {
-  width: 100%; }
-
 .features {
-  padding: -200px 0 0; }
-
-.customer-segments {
-  margin-left: 10px;
-  margin-right: 10px; }
+  margin-left: 100px;
+  margin-right: 100px; }
 
 .nav-align-center {
   text-align: center; }
@@ -2952,15 +2949,25 @@ h2.title {
 .landing-page .navbar-transparent {
   background-color: rgba(0, 0, 0, 0.4);
   padding-top: 10px;
-  border-radius: 0; }
-.landing-page .section-demo {
-  background: #eeeeee; }
+  border-radius: 0;
+  color: #FFFFFF; }
+.landing-page .section-get-ready-to-ride {
+  height: 100vh; }
+  .landing-page .section-get-ready-to-ride .title {
+    margin-top: 100px;
+    color: #FFFFFF; }
+  .landing-page .section-get-ready-to-ride .description {
+    color: #FFFFFF; }
+.landing-page .section-contact-us {
+  background: #757575;
+  color: #9e9e9e; }
+  .landing-page .section-contact-us .btn-contact-us {
+    background-color: #9e9e9e;
+    color: #e0e0e0; }
 .landing-page .vcenter {
   display: inline-block;
   vertical-align: middle;
   float: none; }
-.landing-page .section-get-ride-it {
-  background: #eeeeee; }
 .landing-page .info-title {
   color: #fc4c02; }
 .landing-page .step1-example-image {
@@ -2975,9 +2982,6 @@ h2.title {
   height: 45vh;
   width: 67vh;
   background-image: url("/assets/img/step3.jpg"); }
-
-.material-icons .big-icon {
-  font-size: 200px; }
 
 @media (max-width: 991px) {
   .landing-page .header {
@@ -3023,5 +3027,8 @@ h2.title {
 
 .strava-badge-follow {
   margin-top: -1px; }
+
+.big-icon {
+  font-size: 30px; }
 
 /*# sourceMappingURL=material-single-page.css.map */

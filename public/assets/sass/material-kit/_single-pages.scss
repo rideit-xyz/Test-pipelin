@@ -22,11 +22,16 @@
 h2.title{
     margin-bottom: $margin-base * 2;
 }
+
 .description{
     color: $gray-light;
 }
 
-// general style for example pages
+.description-for-whom{
+    font-size:15px;
+}
+
+
 .header-filter{
     position: relative;
 
@@ -47,20 +52,10 @@ h2.title{
         position: relative;
     }
 }
-.gallery{
-    .image{
-        img{
-            width: 100%;
-        }
-    }
-}
-.features{
-    padding: -200px 0 0;
-}
 
-.customer-segments{
-    margin-left: 10px;
-    margin-right: 10px;        
+.features{    
+    margin-left: 100px;
+    margin-right: 100px;        
 }
 
 .nav-align-center{
@@ -79,7 +74,6 @@ h2.title{
 
 // style for the landing page
 .landing-page{
-
     .header{
         height: 100vh;
 
@@ -104,14 +98,34 @@ h2.title{
     }
     
     .navbar-transparent{
-         background-color: rgba(0,0,0,.4);
+        background-color: rgba(0,0,0,.4);
         padding-top: 10px;
         border-radius: 0;
+        color: $white-color;
     }  
 
-    .section-demo{
-        background: $grey-200;
+    .section-get-ready-to-ride{
+        height: 100vh;
+
+        .title{
+            margin-top:100px;
+            color: $white-color;
+        }
+
+        .description{
+            color: $white-color;
+        }
+        
     }
+        
+    .section-contact-us{
+        background: $grey-600;
+        color:$grey-500;
+        .btn-contact-us{
+            background-color:$grey-500;
+            color:$grey-300;
+        }        
+    } 
 
     .vcenter{
          display: inline-block;
@@ -119,10 +133,7 @@ h2.title{
         float: none;
     }
 
-    .section-get-ride-it{
-        background: $grey-200;
-    } 
-
+   
     .info-title{
         color:$brand-primary;
     }
@@ -147,9 +158,6 @@ h2.title{
     
 }
 
-.material-icons .big-icon{
- font-size: 200px;
-}
 
 @media (max-width: 991px){
     .landing-page .header{
@@ -211,4 +219,10 @@ h2.title{
     width: 100%;
 }
 
-.strava-badge-follow { margin-top:-1px; }
+.strava-badge-follow { 
+    margin-top:-1px; 
+}
+
+.big-icon{
+ font-size: 30px;
+}

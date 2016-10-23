@@ -24,14 +24,28 @@ function buildSignInEndPoint (){
  ************************************/
 
 /**
- * render logon screen
+ * render landing page (home screen)
  *
  * @param {req} request
  * @param {res} response
  */
 function renderIndex(req,res){
-  res.render('landing', {
+  res.render('home', {
     title: 'Welcome',    
+    signInEndPoint:buildSignInEndPoint(),
+    layout: 'single-page'
+  });  
+}
+
+/**
+ * render how it works page
+ *
+ * @param {req} request
+ * @param {res} response
+ */
+function renderHowItWorks(req,res){
+  res.render('how-it-works', {
+    title: 'How it works',    
     signInEndPoint:buildSignInEndPoint(),
     layout: 'single-page'
   });  
@@ -43,5 +57,8 @@ function renderIndex(req,res){
 module.exports={
     index :function(req, res) {
       renderIndex(req,res);
+    },
+    howitworks :function(req, res) {
+      renderHowItWorks(req,res);
     }
 }
