@@ -33,7 +33,7 @@ function renderIndex(req,res){
   res.render('home', {
     title: 'Welcome',    
     signInEndPoint:buildSignInEndPoint(),
-    layout: 'single-page'
+    layout: 'landing-page'
   });  
 }
 
@@ -47,7 +47,7 @@ function renderHowItWorks(req,res){
   res.render('how-it-works', {
     title: 'How it works',    
     signInEndPoint:buildSignInEndPoint(),
-    layout: 'single-page'
+    layout: 'landing-page'
   });  
 }
 
