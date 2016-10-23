@@ -2951,6 +2951,10 @@ h2.title {
   padding-top: 10px;
   border-radius: 0;
   color: #FFFFFF; }
+.landing-page .section-features {
+  background: #FFFFFF; }
+.landing-page .section-for-whom {
+  background: #FFFFFF; }
 .landing-page .section-get-ready-to-ride {
   height: 100vh; }
   .landing-page .section-get-ready-to-ride .title {
