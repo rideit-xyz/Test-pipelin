@@ -25,19 +25,6 @@ function insertUserInAirtable (user){
   });
 }
 
-/**
- * insert user in waiting list
- *
- * @param {email} user email
- * @param {importantChoice} priority of the user
- */
-function insertUserInWaitingList (email,importantChoice){
-  base('waitingList').create({email:email,importantChoice:importantChoice}, function(err, record) {
-    if (err) { console.log(err); return; }
-    console.log(record);
-  });
-}
-
 /***********************************
  * rendering functions
  ************************************/
@@ -56,19 +43,6 @@ function renderWelcome(req,res){
   });
 }
 
-/**
- * get on user waiting list screen
- *
- * @param {req} request
- * @param {res} response
- */
-function renderGetOnWaitingList(req,res){
-  insertUserInWaitingList(req.body.email, req.body.optionsRadiosImportant);
-  res.render('get-on-waiting-list', {
-    title: 'Get on our waiting list',
-    layout: 'single-page'
-  });
-}
 
 /***********************************
  * Module exports.
@@ -79,8 +53,5 @@ module.exports={
     },
     welcome :function(req, res) {
       renderWelcome(req,res);
-    },
-    getonwaitinglist :function(req, res) {
-      renderGetOnWaitingList(req,res);
-    }
+    }    
 }
