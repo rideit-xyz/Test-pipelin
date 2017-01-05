@@ -17,7 +17,7 @@ var exphbs = require('express-handlebars');
 var passport = require('passport');
 var StravaStrategy = require('passport-strava').Strategy;
 var connectEnsureLogin=require('connect-ensure-login');
-var globalTunnel = require('global-tunnel');
+var mongoose = require('mongoose');
 
 
 /***********************************
@@ -69,7 +69,7 @@ passport.serializeUser(function(user, cb) {
   cb(null, user);
 });
 
-passport.deserializeUser(function(obj, cb) {
+passport.deserialibzeUser(function(obj, cb) {
   cb(null, obj);
 });
 
@@ -95,6 +95,12 @@ app.use(Logger.getRequestLogger());
 
 //globalTunnel.initialize();
 
+/***********************************
+ * Database
+ ************************************/
+mongoose.connect();
+var MongoDb=mongo.Db;
+var MongoBSON=mongo.BSONPure;
 
 /***********************************
  * Controllers
@@ -114,7 +120,17 @@ app.get('/login/strava/call-back',
   });
 app.get('/logout',connectEnsureLogin.ensureLoggedIn(),logonController.index);
 app.get('/welcome',connectEnsureLogin.ensureLoggedIn(), logonController.welcome);
-app.post('/getonwaitinglist', logonController.getonwaitinglist);
+
+
+/***********************************
+ * API V0
+ ************************************/
+var rootApisEndpointV0 = '/api/v0';
+//import APIs
+var importApisEndpointV0=rootApisEndpointV0+'/import';
+var importApis = require('./api/import');
+//importActivities
+app.post (importApisEndpointV0+'/importActivities',importApis.importActivities)
 
 
 /***********************************

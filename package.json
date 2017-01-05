@@ -1,7 +1,7 @@
 {
-  "name": "just-ride-it",
+  "name": "ride-it",
   "version": "0.1.0",
-  "description": "Prepare your next ride",
+  "description": "Make every ride your ultimate ride",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -20,7 +20,6 @@
     "morgan": "^1.7.0",
     "nodemailer": "^2.3.0",
     "socket.io": "^1.4.8",
-    "global-tunnel": "^1.2.0",
     "winston": "^2.2.0",
     "express-winston-middleware": "^0.1.0",
     "node-rest-client": "^2.0.1",
@@ -36,8 +35,10 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
     "gulp-jshint": "^2.0.4",
     "mocha": "^2.4.5",
+    "run-sequence": "^1.2.2",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
     "supertest": "^1.2.0"

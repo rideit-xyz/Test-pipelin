@@ -23,7 +23,8 @@ var Logger = require('../lib/logger');
  * @param {res} response
  */
 function importActivities(req,res){
-  
+  Logger.getLogger().info('Importing activities:' + req.user.displayName);
+  res.send('mlk');
 }
 
 /**
@@ -45,5 +46,5 @@ module.exports={
     },
     importActivityDetail :function(req, res) {
       importActivityDetail(req,res);
-    },   
+    }
 }
