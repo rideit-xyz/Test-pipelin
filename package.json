@@ -28,20 +28,15 @@
     "passport": "^0.2.2",
     "passport-strava": "^0.2.0",
     "airtable": "^0.4.2",
-    "https-proxy-agent": "^1.0.0",
-    "http-proxy-agent": "^1.0.0",
     "mongoose": "^4.7.3"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.3.2",
     "gulp-jshint": "^2.0.4",
-    "mocha": "^2.4.5",
-    "run-sequence": "^1.2.2",
-    "sinon": "^1.17.3",
-    "sinon-chai": "^2.8.0",
-    "supertest": "^1.2.0"
+    "gulp-sass": "^3.0.0",
+    "jshint": "^2.9.4",
+    "run-sequence": "^1.2.2"
   },
   "engines": {
     "node": "6.1.0"

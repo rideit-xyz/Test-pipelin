@@ -69,7 +69,7 @@ passport.serializeUser(function(user, cb) {
   cb(null, user);
 });
 
-passport.deserialibzeUser(function(obj, cb) {
+passport.deserializeUser(function(obj, cb) {
   cb(null, obj);
 });
 
@@ -98,9 +98,9 @@ app.use(Logger.getRequestLogger());
 /***********************************
  * Database
  ************************************/
-mongoose.connect();
-var MongoDb=mongo.Db;
-var MongoBSON=mongo.BSONPure;
+//mongoose.connect();
+//var MongoDb=mongo.Db;
+//var MongoBSON=mongo.BSONPure;
 
 /***********************************
  * Controllers
