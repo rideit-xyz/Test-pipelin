@@ -61,4 +61,4 @@ module.exports={
     howitworks :function(req, res) {
       renderHowItWorks(req,res);
     }
-}
+};

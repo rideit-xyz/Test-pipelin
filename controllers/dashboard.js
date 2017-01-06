@@ -50,4 +50,4 @@ module.exports={
     index :function(req, res) {
       renderIndex(req,res);
     }
-}
+};

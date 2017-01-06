@@ -54,4 +54,4 @@ module.exports={
     welcome :function(req, res) {
       renderWelcome(req,res);
     }    
-}
+};

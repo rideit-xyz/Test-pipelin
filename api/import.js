@@ -47,4 +47,4 @@ module.exports={
     importActivityDetail :function(req, res) {
       importActivityDetail(req,res);
     }
-}
+};

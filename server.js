@@ -130,7 +130,7 @@ var rootApisEndpointV0 = '/api/v0';
 var importApisEndpointV0=rootApisEndpointV0+'/import';
 var importApis = require('./api/import');
 //importActivities
-app.post (importApisEndpointV0+'/importActivities',importApis.importActivities)
+app.post (importApisEndpointV0+'/importActivities',importApis.importActivities);
 
 
 /***********************************
