@@ -61,7 +61,6 @@ var PassportConfigurator = loopbackPassport.PassportConfigurator;
 var passportConfigurator = new PassportConfigurator(app);
 
 // attempt to build the providers/passport config
-console.log(process.env.NODE_ENV);
 var config = {};
 config = require('../providers.js');
 
