@@ -35,7 +35,7 @@
     "public": false
   },
   "importActivity": {
-    "dataSource": "rideit",
+    "dataSource": "db",
     "public": true
   }
 }

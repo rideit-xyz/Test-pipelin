@@ -1,6 +1,5 @@
-module.exports = {  
-  host:'0.0.0.0',
-  port: 3000,
-  url: 'http://localhost:3000/',
-  cookieSecret: process.env.SESSION_SECRET    
+module.exports = {      
+  host: process.env.CUSTOM_HOST,
+  port: process.env.CUSTOM_PORT,
+  cookieSecret: process.env.SESSION_SECRET 
 };
