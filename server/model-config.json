@@ -34,7 +34,7 @@
     "dataSource": "db",
     "public": false
   },
-  "importActivity": {
+  "activity": {
     "dataSource": "db",
     "public": true
   }

@@ -1,16 +1,16 @@
 {
-  "name": "importActivity",
-  "plural": "importActivities",
+  "name": "activity",
+  "plural": "activities",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "source": {
+    "name": {
       "type": "string",
       "required": true,
-      "default": "strava"
+      "default": ""
     }
   },
   "validations": [],
