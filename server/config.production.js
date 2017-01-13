@@ -1,4 +1,5 @@
 module.exports = {      
-  url: 'http://ride-it-xyz.herokuapp.com',
+  host: process.env.CUSTOM_HOST,
+  port: process.env.CUSTOM_PORT,
   cookieSecret: process.env.SESSION_SECRET 
 };
