@@ -8,22 +8,10 @@
  ************************************/
 var express = require('express');
 var Logger = require('../lib/logger');
-var base = require('airtable').base('appdK77fBnr8jkoUn');
 
 /***********************************
  * Private functions
  ************************************/
-/**
- * insert user in airtable
- *
- * @param {user} strava user 
- */
-function insertUserInAirtable (user){
-  base('strava').create({id:user.displayName,json:JSON.stringify(user)}, function(err, record) {
-    if (err) { console.log(err); return; }
-    console.log(record);
-  });
-}
 
 /***********************************
  * rendering functions
@@ -35,8 +23,7 @@ function insertUserInAirtable (user){
  * @param {req} request
  * @param {res} response
  */
-function renderWelcome(req,res){
-  insertUserInAirtable(req.user);
+function renderWelcome(req,res){  
   res.render('welcome', {
     title: 'Welcome', user: req.user,json:JSON.stringify(req.user),
     layout: 'single-page'

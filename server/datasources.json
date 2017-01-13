@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory",
+    "file": "db.json"
+  },
+  "rideit": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "database": "rideit",
+    "username": "",
+    "password": "",
+    "name": "dev",
+    "connector": "mongodb"
+  }
+}

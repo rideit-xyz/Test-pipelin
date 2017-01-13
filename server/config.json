@@ -1,0 +1,8 @@
+{
+  "legacyExplorer": false,
+  "restApiRoot": "/api",
+  "remoting": {
+    "cors": false,
+    "handleErrors": false
+  }
+}

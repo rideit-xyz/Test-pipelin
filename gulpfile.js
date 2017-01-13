@@ -21,22 +21,22 @@ gulp.task('build', function (callback) {
  ************************************/ 
 //Code quality
 gulp.task('lint', function(callback) {
-  return gulp.src(['server.js','./lib/*.js','./api/*.js','./controllers/*.js','./views/*.js'])
+  return gulp.src(['server/*.js','server/lib/*.js','server/controllers/*.js','server/views/*.js','server/boot/*.js','server/data/*.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
 
 //CSS compilation
 gulp.task('sass', function (callback) {
-  return gulp.src('./public/assets/sass/**/*.scss')
+  return gulp.src('./client/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))    
-    .pipe(gulp.dest('./public/assets/css'));
+    .pipe(gulp.dest('./client/css'));
 });
 
 gulp.task('minify-css', function (callback) {
-  return gulp.src('./public/assets/css/material-single-page.css')    
+  return gulp.src('./client/css/material-single-page.css')    
     .pipe(sourcemaps.init())
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe (sourcemaps.write('./'))
-    .pipe(gulp.dest('./public/assets/css'));
+    .pipe(gulp.dest('./client/css'));
 });
