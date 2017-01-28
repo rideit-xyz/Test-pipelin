@@ -1,6 +1,6 @@
 {
-  "name": "accessToken",
-  "plural": "accessTokens",
+  "name": "jsonWebToken",
+  "plural": "jsonWebTokens",
   "base": "AccessToken",
   "properties": {},
   "validations": [],
