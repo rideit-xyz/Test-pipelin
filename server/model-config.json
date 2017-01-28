@@ -10,7 +10,15 @@
     "dataSource": "db",
     "public": false
   },
+  "extendedUser": {
+    "dataSource": "db",
+    "public": false
+  },
   "accessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "jsonWebToken": {
     "dataSource": "db",
     "public": false
   },

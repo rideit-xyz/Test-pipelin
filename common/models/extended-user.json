@@ -1,0 +1,20 @@
+{
+  "name": "extendedUser",
+  "plural": "extendedUsers",
+  "base": "User",
+  "idInjection":false,
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "jsonWebToken",
+      "foreignKey": "userId",
+      "options":{
+        "disableInclude":true
+      }
+    }    
+  },
+  "acls": [],
+  "methods": {}
+}

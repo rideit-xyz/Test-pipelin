@@ -18,7 +18,7 @@
         "${restApiRoot}"
       ]
     }
-  },
+  },  
   "files": {
     "loopback#static": {
       "params": "$!../client"

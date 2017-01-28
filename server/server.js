@@ -1,12 +1,6 @@
 /***********************************
  * Module dependencies. 
  ************************************/
-//var express = require('express');
-//var path = require('path');
-//var compression = require('compression');
-//var methodOverride = require('method-override');
-//var session = require('express-session');
-
 var cookieParser = require('cookie-parser');
 var expressValidator = require('express-validator');
 var exphbs = require('express-handlebars');
@@ -15,6 +9,7 @@ var passport = require('passport');
 var connectEnsureLogin=require('connect-ensure-login');
 var Logger = require('./lib/logger');
 var loopback = require('loopback');
+var apiExplorer = require('loopback-component-explorer');
 var boot = require('loopback-boot');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
@@ -124,9 +119,9 @@ var dashboardController = require('./controllers/dashboard');
 
 app.get('/', landingController.index);
 app.get('/howitworks', landingController.howitworks);
-app.get('/login', landingController.index);
-app.get('/auth/logout',connectEnsureLogin.ensureLoggedIn(),logonController.index);
-app.get('/auth/welcome',connectEnsureLogin.ensureLoggedIn(), logonController.welcome);
+app.get('/login', logonController.login);
+app.get('/auth/logout',connectEnsureLogin.ensureLoggedIn(),logonController.logout);
+app.get('/auth/welcome', logonController.welcome);
 
 
 /***********************************
@@ -137,11 +132,7 @@ app.start = function() {
   return app.listen(function() {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
-    console.log('Web server listening at: %s', baseUrl);
-    if (app.get('loopback-component-explorer')) {
-      var explorerPath = app.get('loopback-component-explorer').mountPath;
-      console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
-    }
+    console.log('Web server listening at: %s', baseUrl);   
   });
 };
 

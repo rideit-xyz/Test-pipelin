@@ -18,6 +18,19 @@ var Logger = require('../lib/logger');
  ************************************/
 
 /**
+ * logon screen
+ *
+ * @param {req} request
+ * @param {res} response
+ */
+function renderLogin(req,res){  
+  res.render('welcome', {
+    title: 'Welcome', user: req.user,json:JSON.stringify(req.user),
+    layout: 'single-page'
+  });
+}
+
+/**
  * welcome screen
  *
  * @param {req} request
@@ -35,10 +48,13 @@ function renderWelcome(req,res){
  * Module exports.
  ************************************/
 module.exports={
-    index :function(req, res) {
-      renderIndex(req,res);
+    login :function(req, res) {
+      renderLogin(req,res);
     },
     welcome :function(req, res) {
       renderWelcome(req,res);
-    }    
+    },
+    logout :function(req, res) {
+      renderLogout(req,res);
+    }   
 };
