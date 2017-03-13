@@ -1,7 +1,11 @@
 {
   "db": {
-    "name": "db",
-    "connector": "memory",
-    "file": "db.json"
-  }  
+    "name":"db",
+    "connector": "mongodb",
+    "database": "rideit-xyz",
+    "host": "ds155509.mlab.com",
+    "port": 55509,
+    "username":"rideit",
+    "password":"1234"
+  }
 }

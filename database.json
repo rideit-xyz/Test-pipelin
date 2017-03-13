@@ -1,0 +1,10 @@
+{
+  "dev": {
+    "driver": "mongodb",
+    "database": "rideit-xyz",
+    "host": "ds155509.mlab.com",
+    "username": {"ENV": "DB_USERNAME"},
+    "password": {"ENV": "DB_PASSWORD"},
+    "port": 55509
+  }
+}

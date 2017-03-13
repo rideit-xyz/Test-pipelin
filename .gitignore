@@ -14,6 +14,9 @@ results
 tmp
 coverage
 
+#in memory db
+db.json
+
 # API keys
 .env
 
